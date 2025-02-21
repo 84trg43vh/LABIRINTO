@@ -1,0 +1,139 @@
+/* Reset de margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d; /* Cor de fundo geral */
+    color: #fff;
+    overflow: hidden; /* Evita rolagem indesejada */
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #1a1a1a;  /* Fundo escuro */
+    color: #ff5722; /* Texto laranja */
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 15px;  /* Bordas arredondadas */
+    border: 3px solid #ff5722; /* Borda laranja */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Estilos do conteúdo do jogo */
+#game-container {
+    margin-top: 120px; /* Espaçamento suficiente para o cabeçalho fixo */
+    text-align: center;
+    padding: 20px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilos do timer */
+#timer {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #ff9800;
+}
+
+/* Responsividade para celulares */
+canvas {
+    border: 2px solid #fff;
+    margin-top: 20px;
+    width: 100%;  /* Faz o canvas ocupar toda a largura da tela */
+    max-width: 500px;  /* Limita o tamanho máximo do canvas */
+    height: auto;  /* Ajusta a altura automaticamente para manter a proporção */
+}
+
+/* Ajuste de fontes e tamanho para dispositivos móveis */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+    #timer {
+        font-size: 16px;
+    }
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+/* Ajuste para os controles de toque */
+#controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+/* Controles horizontais (esquerda e direita) */
+.horizontal-controls {
+    display: flex;
+    gap: 20px;
+}
+
+/* Layout para os botões de controle */
+#up, #down, #left, #right {
+    background-color: #ff5722;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Ajuste da posição dos botões de controle */
+#up {
+    margin-bottom: 20px;
+}
+
+#down {
+    margin-top: 20px;
+}
+
+/* Botões horizontais (esquerda e direita) */
+#left, #right {
+    width: 70px;
+    height: 70px;
+}
+
+/* Hover nos botões */
+.control-btn:hover {
+    background-color: #ff9800;
+}
